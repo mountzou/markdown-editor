@@ -1,0 +1,149 @@
+/* Preview pane styles - marked/HTML output */
+.preview-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+}
+
+.preview-content {
+  flex: 1;
+  min-height: min-content;
+}
+
+/* Markdown content styling */
+.preview-content h1,
+.preview-content h2,
+.preview-content h3,
+.preview-content h4,
+.preview-content h5,
+.preview-content h6 {
+  margin: 1.25em 0 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-h);
+}
+
+.preview-content h1 { font-size: 1.75rem; margin-top: 0; }
+.preview-content h2 { font-size: 1.4rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--border); }
+.preview-content h3 { font-size: 1.2rem; }
+.preview-content h4, .preview-content h5, .preview-content h6 { font-size: 1rem; }
+
+.preview-content p {
+  margin: 0.75em 0;
+}
+
+.preview-content ul,
+.preview-content ol {
+  margin: 0.75em 0;
+  padding-left: 1.5em;
+}
+
+.preview-content li {
+  margin: 0.25em 0;
+}
+
+.preview-content blockquote {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  border-left: 4px solid var(--accent);
+  color: var(--text);
+  background: var(--accent-bg);
+}
+
+.preview-content code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background: var(--code-bg);
+  border-radius: 4px;
+}
+
+.preview-content pre {
+  margin: 0.75em 0;
+  padding: 1em;
+  overflow: auto;
+  background: var(--code-bg);
+  border-radius: 6px;
+}
+
+.preview-content pre code {
+  padding: 0;
+  background: none;
+}
+
+.preview-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.preview-content a:hover {
+  text-decoration: underline;
+}
+
+.preview-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.9rem;
+}
+
+.preview-content th,
+.preview-content td {
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.preview-content th {
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+.preview-content hr {
+  margin: 1.5em 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* Task list checkboxes – light appearance */
+.preview-content input[type='checkbox'] {
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.4em 0.2em 0;
+  vertical-align: middle;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  cursor: default;
+}
+
+.preview-content input[type='checkbox']:checked {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.preview-content input[type='checkbox']:checked::before {
+  content: '';
+  display: block;
+  width: 0.35em;
+  height: 0.6em;
+  margin: 0.1em 0 0 0.25em;
+  border: solid var(--border);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* LaTeX / KaTeX */
+.preview-content .math-block {
+  margin: 1em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.preview-content .katex {
+  font-size: 1.1em;
+}
