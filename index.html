@@ -2,6 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#393E46" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)" />
+
+    <!-- Primary Meta -->
+    <title>Markdown Editor — Real-time preview, LaTeX &amp; syntax highlighting</title>
+    <meta name="description" content="A client-side Markdown editor with real-time preview, syntax highlighting for code blocks, and LaTeX support for mathematical expressions. Built with React and TypeScript." />
+    <meta name="author" content="Chris Mountzouris" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Markdown Editor — Real-time preview, LaTeX &amp; syntax highlighting" />
+    <meta property="og:description" content="A client-side Markdown editor with real-time preview, syntax highlighting, and LaTeX support for math. Built with React and TypeScript." />
+
+    <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Markdown Editor — Real-time preview, LaTeX &amp; syntax highlighting" />
+    <meta name="twitter:description" content="A client-side Markdown editor with real-time preview, syntax highlighting, and LaTeX support. Built with React and TypeScript." />
+
+    <!-- PWA / Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
     <script>
       (function() {
         var stored = localStorage.getItem('markdown-editor-theme');
@@ -12,8 +40,6 @@
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown Editor</title>
   </head>
   <body>
     <div id="root"></div>
