@@ -2,6 +2,9 @@
  * Default markdown content shown when the editor loads.
  */
 
+/** localStorage key for persisting editor content. */
+export const MARKDOWN_STORAGE_KEY = 'markdown-editor-content'
+
 export const INITIAL_MARKDOWN = `# Welcome
 
 Welcome to **Markdown Editor**, a clean space for writing, previewing, and refining your documents in real time. Create notes, documentation, and technical content with support for **live preview** and **LaTeX math**.
@@ -69,7 +72,7 @@ $$
 \\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx = \\sqrt{\\pi}
 $$
 
-## GFM extras
+## Table
 
 | Column A | Column B |
 | -------- | -------- |
