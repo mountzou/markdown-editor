@@ -17,13 +17,16 @@
     <meta property="og:title" content="Markdown Editor — Real-time preview, LaTeX &amp; syntax highlighting" />
     <meta property="og:description" content="A client-side Markdown editor with real-time preview, syntax highlighting, and LaTeX support for math. Built with React and TypeScript." />
 
-    <meta property="og:image" content="/favicon.svg" />
+    <% if (baseUrl) { %><link rel="canonical" href="<%- baseUrl %>/" /><% } %>
+    <meta property="og:image" content="<%= baseUrl ? baseUrl + '/android-chrome-512x512.png' : './android-chrome-512x512.png' %>" />
     <meta property="og:locale" content="en_US" />
+    <% if (baseUrl) { %><meta property="og:url" content="<%- baseUrl %>/" /><% } %>
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Markdown Editor — Real-time preview, LaTeX &amp; syntax highlighting" />
     <meta name="twitter:description" content="A client-side Markdown editor with real-time preview, syntax highlighting, and LaTeX support. Built with React and TypeScript." />
+    <meta name="twitter:image" content="<%= baseUrl ? baseUrl + '/android-chrome-512x512.png' : './android-chrome-512x512.png' %>" />
 
     <!-- PWA / Mobile -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -38,7 +41,16 @@
         }
       })();
     </script>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <% if (baseUrl) { %>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Markdown Editor","description":"A client-side Markdown editor with real-time preview, syntax highlighting for code blocks, and LaTeX support for mathematical expressions. Built with React and TypeScript.","url":"<%- baseUrl %>/","applicationCategory":"DeveloperApplication","operatingSystem":"Any"}
+    </script>
+    <% } %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
   </head>
   <body>

@@ -127,6 +127,7 @@ function App() {
           </div>
         </header>
         <main className="app-main" role="main">
+          <h1 className="sr-only">Markdown Editor</h1>
           <Layout markdown={markdown} onEditorChange={handleEditorChange} />
         </main>
         <Footer />
