@@ -2,7 +2,7 @@ import { useRef, useEffect, useMemo } from 'react'
 import hljs from '../../lib/highlight'
 import { markdownToHtml } from '../../lib/markdown'
 import './preview.css'
-import 'highlight.js/styles/github.css'
+import './highlight-themes.css'
 
 interface PreviewProps {
   content: string
